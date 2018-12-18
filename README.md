@@ -6,16 +6,15 @@ Python terminal application to manipulate bookmarks of PDF files.
 * Add bookmarks to pdf from existing .txt heirarchy
 * Auto-add bookmarks to pdf from predefined per-page pattern
 
-
 ## Examples
-python3 PyBookMark input.pdf output.pdf 
-//Creates a new pdf output.pdf from input.pdf and adds bookmarks from default pattern in config.
-
-python3 PyBookMark input.pdf output.txt -e
+python3 PyBookMark.py -i "input.pdf" -o "output.txt" -e
 //Extracts bookmark heirarchy to output.txt
 
-python3 PyBookMark input.pdf output.pdf instructions.txt
+python3 PyBookMark.py -i "input.pdf" -o "output.pdf" -p "instructions.txt"
 //Creates a new pdf and depending of formatting of instructions.txt, either adds bookmarks from text file or uses text file as pattern to generate bookmarks.
+
+python3 PyBookMark.py -b "path to folder" -p "instructions.txt"
+//Applies operation to all PDFs in specified folder and puts the new files, with unchanged names, in a new subfolder.
 
 ## Author
 * **Olle Olofsson** - *Initial work* - [LtnPjk] 
